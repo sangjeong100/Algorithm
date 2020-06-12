@@ -124,7 +124,7 @@ void travel2()
                 u.path = v.path;
                 u.path.push_back(i);
 
-                if (u.level == n - 2)                                 //끝에서 2번째에 도달
+                if (u.level >= n - 2)                                 //끝에서 2번째에 도달
                 {
                     for (int k = 2; k <= n; k++)
                     {
@@ -165,21 +165,6 @@ int main()
     if (n == 1)
     {
         cout << 0 << "\n" << n;
-        return 0;
-    }
-
-    else if (n == 2)
-    {
-        node u;
-        u.path.push_back(1);
-        u.path.push_back(2);
-        u.path.push_back(1);
-        minlength = length(u);
-
-        cout << minlength << endl;
-        for (int i = 0; i < u.path.size(); i++)
-            cout << u.path[i] << " ";
-        
         return 0;
     }
 
